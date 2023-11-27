@@ -1,0 +1,92 @@
+/* Style for the black background when there's no thumbnail image */
+.blackBackground {
+    /* Add your styles for the black background here */
+    background-color: #000;
+  }
+
+/* Style for the source name in the center */
+.sourceName {
+/* Add your styles for the source name here */
+color: white;
+font-size: 18px;
+padding: 10px;
+text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.pagination a {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #292828;
+    color: #292828;
+}
+
+.paginationLink {
+    font-weight: bold;
+}
+
+.paginationLinkActive a {
+    color: #fff !important;
+    background: #292828;
+}
+
+.paginationLinkDisabled a {
+    color: rgb(198, 197, 202);
+    border: 1px solid rgb(198, 197, 202);
+}
+
+.thumbnail{
+    height: 230px;
+    object-fit: cover;
+    -webkit-box-reflect: below 0 linear-gradient(0deg,rgba(0,0,0,.2),transparent 50%);
+}
+.noThumnail{
+    height: 230px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsCard{
+    flex: 0 0 32%;
+}
+
+.searchBar{
+    width: 415px;
+}
+
+@media (max-width: 760px) {
+    .newsCard {
+      flex: 0 0 49%; /* Show 1 card per row on mobile screens */
+    }
+    .searchBar{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .searchBar{
+        width: 100%;
+    }
+    .newsCard {
+      flex: 0 0 100%; /* Show 1 card pe5r row on mobile screens */
+    }
+    .pagination{
+        padding: 0px;
+    }
+    .pagination a {
+        padding: 5px;
+        margin: 5px;
+    }
+}
+
